@@ -23,7 +23,7 @@ app.get('/', (req, res, next) => {
 
     Usuario.find({}, 'nombre email img role')
         .skip(desde)
-        .limit(5)
+        .limit(20)
         .exec(
             (err, usuarios) => {
                 if (err) {
